@@ -7,18 +7,12 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div id="container">
+<div id="app">
     <header>
-        <div class="nav">
-            <div class="menu-main">
-                <a href="">Главная</a>
-                <a href="">Товары</a>
-                <a href="">Контакты</a>
-            </div>
-            <div class="basket">
-                <filter-el></filter-el>
-                <basket ref="basket"></basket>
-            </div>
+        <div class="logo">Интернет-магазин</div>
+        <div class="cart">
+            <filter-el></filter-el>
+            <cart ref="cart"></cart>
         </div>
     </header>
     <main>
@@ -28,8 +22,8 @@
 </div>
     <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="js/BasketComp.js"></script>
-    <script src="js/ProductComp.js"></script>
+    <script src="js/CartComp.js"></script>
+    <script src="js/ProducComp.js"></script>
     <script src="js/FilterComp.js"></script>
     <script src="js/ErrorComp.js"></script>
     <script src="js/main.js"></script>
