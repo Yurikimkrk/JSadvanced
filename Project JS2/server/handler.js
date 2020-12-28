@@ -1,12 +1,24 @@
 const fs = require('fs');
 const cart = require('./cart');
 const logger = require('./logger');
+
+/**
+ * обновили словарь
+ * @type {{add: *, change: *, remove: *}}
+ */
 const actions = {
     add: cart.add,
     change: cart.change,
     remove: cart.remove,
 };
 
+/**
+ * подключили логгер
+ * @param req
+ * @param res
+ * @param action
+ * @param file
+ */
 const handler = (req, res, action, file) => {
     fs.readFile(file, 'utf-8', (err, data) => {
         if (err) {

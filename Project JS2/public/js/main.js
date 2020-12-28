@@ -1,6 +1,6 @@
 const API = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
 
-const container = new Vue({
+const app = new Vue({
     el: '#app',
     methods: {
         getJson(url) {
@@ -47,3 +47,4 @@ const container = new Vue({
         },
     },
 });
+
