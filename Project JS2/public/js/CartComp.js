@@ -1,15 +1,15 @@
 Vue.component('cart', {
-    data() {
-        return {
-            imgBasket: 'https://placehold.it/50x100',
-            cartItems: [],
-            showBasket: false,
-        }
+    data(){
+      return {
+          imgCart: 'https://placehold.it/50x100',
+          cartItems: [],
+          showCart: false,
+      }
     },
     methods: {
-        addProduct(product) {
+        addProduct(product){
             let find = this.cartItems.find(el => el.id_product === product.id_product);
-            if (find) {
+            if(find){
                 this.$parent.putJson(`/api/cart/${find.id_product}`, {quantity: 1});
                 find.quantity++;
             } else {
@@ -40,10 +40,10 @@ Vue.component('cart', {
             }
         },
     },
-    mounted() {
+    mounted(){
         this.$parent.getJson('/api/cart')
             .then(data => {
-                for (let el of data.contents) {
+                for(let el of data.contents){
                     this.cartItems.push(el);
                 }
             });

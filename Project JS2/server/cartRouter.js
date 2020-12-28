@@ -20,7 +20,9 @@ router.post('/', (req, res) => {
 router.put('/:id', (req, res) => {
     handler(req, res, 'change', './server/db/userCart.json');
 });
-
+/**
+ * Добавили роут для удаления товара
+ */
 router.delete('/:id', (req, res) => {
     handler(req, res, 'remove', './server/db/userCart.json');
 });
